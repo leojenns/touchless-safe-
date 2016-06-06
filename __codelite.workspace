@@ -18,7 +18,13 @@
       <Project Name="led" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="sound-beta" Path="sound-beta/_codelite.project" Active="Yes"/>
+  <Project Name="movement" Path="movement/_codelite.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="movement" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="sound-beta" Path="sound-beta/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="sound-beta" ConfigName="Release"/>
