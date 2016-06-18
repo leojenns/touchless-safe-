@@ -13,7 +13,7 @@ int main(void)
     bool lock = 0;
     auto adc0 = target::pin_adc( target::ad_pins::a0 );
     
-whistle A(10000);
+whistle A(1000000LL);
 auto button  = target::pin_in( target::pins::d8);
 auto button1  = target::pin_in( target::pins::d9);
 auto button2  = target::pin_in( target::pins::d10);

@@ -285,7 +285,7 @@ END GROUP
                 [!provide]                PROVIDE (__ram_size, __ram_size)
                 [!provide]                PROVIDE (__ram_end, __ram_end)
 
-.text           0x00000000      0x66c
+.text           0x00000000      0x664
                 0x00000000                . = ALIGN (0x4)
                 0x00000000                __text_start = .
                 [!provide]                PROVIDE (__text_start, __text_start)
@@ -340,88 +340,87 @@ END GROUP
                 0x000002c4                keypad::keypad(due::pin_out&, due::pin_out&, due::pin_out&, due::pin_out&, due::pin_in&, due::pin_in&, due::pin_in&, due::pin_in&)
                 0x000002c4                keypad::keypad(due::pin_out&, due::pin_out&, due::pin_out&, due::pin_out&, due::pin_in&, due::pin_in&, due::pin_in&, due::pin_in&)
  .text._ZN6keypad5inputEv
-                0x0000030c       0x70 keypad.o
+                0x0000030c       0x68 keypad.o
                 0x0000030c                keypad::input()
  .text._ZN3due6pin_in3getEv
-                0x0000037c       0x10 main.o
-                0x0000037c                due::pin_in::get()
+                0x00000374       0x10 main.o
+                0x00000374                due::pin_in::get()
  .text._ZN3due6pin_inC2ENS_4pinsE
-                0x0000038c       0x34 main.o
-                0x0000038c                due::pin_in::pin_in(due::pins)
-                0x0000038c                due::pin_in::pin_in(due::pins)
+                0x00000384       0x34 main.o
+                0x00000384                due::pin_in::pin_in(due::pins)
+                0x00000384                due::pin_in::pin_in(due::pins)
  .text._ZN3due7pin_outC2ENS_4pinsE
-                0x000003c0       0x34 main.o
-                0x000003c0                due::pin_out::pin_out(due::pins)
-                0x000003c0                due::pin_out::pin_out(due::pins)
+                0x000003b8       0x34 main.o
+                0x000003b8                due::pin_out::pin_out(due::pins)
+                0x000003b8                due::pin_out::pin_out(due::pins)
  .text.startup.main
-                0x000003f4       0xf0 main.o
-                0x000003f4                main
+                0x000003ec       0xf0 main.o
+                0x000003ec                main
  .text.__startup
-                0x000004e4       0x48 bmptk_cortex.o
-                0x000004e4                __startup
-                0x0000052c                . = ALIGN (0x4)
+                0x000004dc       0x48 bmptk_cortex.o
+                0x000004dc                __startup
+                0x00000524                . = ALIGN (0x4)
  *(.glue_7t .glue_7)
- .glue_7        0x0000052c        0x0 linker stubs
- .glue_7t       0x0000052c        0x0 linker stubs
-                0x0000052c                . = ALIGN (0x4)
+ .glue_7        0x00000524        0x0 linker stubs
+ .glue_7t       0x00000524        0x0 linker stubs
+                0x00000524                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata._ZTVN5hwlib20cout_using_uart_putcE
-                0x0000052c       0x10 keypad.o
-                0x0000052c                vtable for hwlib::cout_using_uart_putc
+                0x00000524       0x10 keypad.o
+                0x00000524                vtable for hwlib::cout_using_uart_putc
  .rodata._ZTVN3due7pin_outE
-                0x0000053c        0xc keypad.o
-                0x0000053c                vtable for due::pin_out
- .rodata        0x00000548       0x40 keypad.o
+                0x00000534        0xc keypad.o
+                0x00000534                vtable for due::pin_out
+ .rodata        0x00000540       0x40 keypad.o
  .rodata.str1.1
-                0x00000588       0x2a keypad.o
-                                 0x2c (size before relaxing)
+                0x00000580       0x2a keypad.o
  .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
-                0x000005b2       0xa4 keypad.o
- *fill*         0x00000656        0x2 
+                0x000005aa       0xa4 keypad.o
+ *fill*         0x0000064e        0x2 
  .rodata._ZTVN3due6pin_inE
-                0x00000658        0xc main.o
-                0x00000658                vtable for due::pin_in
+                0x00000650        0xc main.o
+                0x00000650                vtable for due::pin_in
  .rodata.str1.1
-                0x00000664        0x5 main.o
+                0x0000065c        0x5 main.o
                                  0x1c (size before relaxing)
-                0x0000066c                . = ALIGN (0x4)
- *fill*         0x00000669        0x3 
+                0x00000664                . = ALIGN (0x4)
+ *fill*         0x00000661        0x3 
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000066c                . = ALIGN (0x4)
+                0x00000664                . = ALIGN (0x4)
  *(.gcc_except_table)
-                0x0000066c                . = ALIGN (0x4)
+                0x00000664                . = ALIGN (0x4)
  *(.eh_frame_hdr)
-                0x0000066c                . = ALIGN (0x4)
+                0x00000664                . = ALIGN (0x4)
  *(.eh_frame)
-                0x0000066c                . = ALIGN (0x4)
-                0x0000066c                __text_end = .
+                0x00000664                . = ALIGN (0x4)
+                0x00000664                __text_end = .
                 [!provide]                PROVIDE (__text_end, __text_end)
 
-.vfp11_veneer   0x0000066c        0x0
- .vfp11_veneer  0x0000066c        0x0 linker stubs
+.vfp11_veneer   0x00000664        0x0
+ .vfp11_veneer  0x00000664        0x0 linker stubs
 
-.v4_bx          0x0000066c        0x0
- .v4_bx         0x0000066c        0x0 linker stubs
+.v4_bx          0x00000664        0x0
+ .v4_bx         0x00000664        0x0 linker stubs
 
-.iplt           0x0000066c        0x0
- .iplt          0x0000066c        0x0 keypad.o
+.iplt           0x00000664        0x0
+ .iplt          0x00000664        0x0 keypad.o
 
-.rel.dyn        0x0000066c        0x0
- .rel.iplt      0x0000066c        0x0 keypad.o
+.rel.dyn        0x00000664        0x0
+ .rel.iplt      0x00000664        0x0 keypad.o
 
 .IF_YOU_SEE_THIS_YOU_HAVE_ONE_OR_MORE_GLOBAL_OBJECT_CONSTRUCTORS
  *(.init)
  *(.preinit_array)
  *(SORT(.init_array.*))
  *(.init_array)
-                0x0000066c                . = ALIGN (0x4)
-                0x0000066c                __exidx_start = .
+                0x00000664                . = ALIGN (0x4)
+                0x00000664                __exidx_start = .
                 [!provide]                PROVIDE (__exidx_start, __exidx_start)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000066c                . = ALIGN (0x4)
-                0x0000066c                __exidx_end = .
+                0x00000664                . = ALIGN (0x4)
+                0x00000664                __exidx_end = .
                 [!provide]                PROVIDE (__exidx_end, __exidx_end)
 
 .bss            0x20000000    0x12010
@@ -453,9 +452,9 @@ END GROUP
                 0x20012010                __bss_end = .
                 [!provide]                PROVIDE (__bss_end, __bss_end)
 
-.data           0x20012010       0x14 load address 0x0000066c
+.data           0x20012010       0x14 load address 0x00000664
                 0x20012010                . = ALIGN (0x4)
-                0x0000066c                __data_init_start = LOADADDR (.data)
+                0x00000664                __data_init_start = LOADADDR (.data)
                 [!provide]                PROVIDE (__data_init_start, __data_init_start)
                 0x20012010                __data_start = .
                 [!provide]                PROVIDE (__data_start, __data_start)
@@ -467,13 +466,13 @@ END GROUP
                 0x20012024                . = ALIGN (0x4)
                 0x20012024                __data_end = .
                 [!provide]                PROVIDE (__data_end, __data_end)
-                0x0000066c                __data_init_end = LOADADDR (.data)
+                0x00000664                __data_init_end = LOADADDR (.data)
                 [!provide]                PROVIDE (__data_init_end, __data_init_end)
                 0x00000014                PROVIDE (__data_size, (__data_end - __data_start))
                 0x00000014                PROVIDE (__data_init_size, __data_size)
                 [!provide]                PROVIDE (__data_init_end, (__data_init_start + __data_init_size))
 
-.igot.plt       0x20012024        0x0 load address 0x00000680
+.igot.plt       0x20012024        0x0 load address 0x00000678
  .igot.plt      0x20012024        0x0 keypad.o
                 0x20012024                . = ALIGN (0x4)
                 0x20012024                __heap_start = .

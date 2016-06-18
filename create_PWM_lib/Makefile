@@ -9,10 +9,10 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := PWM_signal.cpp servo.cpp
+SOURCES := PWM_signal.cpp servo.cpp motor.cpp
 
 # header files in this project
-HEADERS := PWM_signal.hpp servo.hpp
+HEADERS := PWM_signal.hpp servo.hpp motor.hpp
 
 # other places to look for files for this project
 SEARCH  := 

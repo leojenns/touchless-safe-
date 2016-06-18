@@ -33,9 +33,25 @@
     <File Name="Makefile"/>
     <File Name="keypad.cpp"/>
     <File Name="keypad.hpp"/>
-    <File Name="sound.hpp"/>
-    <File Name="touchless_safe.hpp"/>
+    <File Name="password.cpp"/>
+    <File Name="password.hpp"/>
     <File Name="sound.cpp"/>
+    <File Name="sound.hpp"/>
+    <File Name="sound_lock.cpp"/>
+    <File Name="sound_lock.hpp"/>
+    <File Name="lock.cpp"/>
+    <File Name="lock.hpp"/>
+    <File Name="touchless_safe.hpp"/>
+    <File Name="motor_g9.cpp"/>
+    <File Name="motor_g9.hpp"/>
+    <File Name="pwm.cpp"/>
+    <File Name="pwm.hpp"/>
+    <File Name="profile.hpp"/>
+    <File Name="profile.cpp"/>
+    <File Name="admin.hpp"/>
+    <File Name="admin.cpp"/>
+    <File Name="movement.cpp"/>
+    <File Name="movement.hpp"/>
   </VirtualDirectory>
   <Settings Type="Dynamic Library">
     <GlobalSettings>
@@ -124,4 +140,6 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>
