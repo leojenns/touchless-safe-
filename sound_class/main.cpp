@@ -2,6 +2,7 @@
 #include "touchless_safe.hpp"
 #include "profile.hpp"
 #include "lock.hpp"
+
 int main(void)
 {
     hwlib::cout << "welkom";
@@ -24,8 +25,9 @@ int main(void)
         int number;
         
 lock l(servoPin,pir);
-profile s(adc0,l);
 keypad j(col1,col2,col3,col4,row1,row2,row3,row4);
+profile s(adc0,l,j);
+
 while(1){
     number = j.input();
 

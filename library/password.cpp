@@ -1,3 +1,14 @@
+
+/****************************************************************************************************************************
+*  auther ::       Leo Jenneskens                                                                                                                                                                                                  
+* File ::              password.cpp                                                                                                                                                                                                            
+* Date::           18 - june - 2016                                                                                                                                                                                                   
+* copyright:    Leo Jenneskens 2016
+*                                                                                                                                                                                                                                                    
+*  Distributed under the Boost Software License, Version 1.0.
+* (See accompanying file LICENSE_1_0.txt or copy at 
+* http://www.boost.org/LICENSE_1_0.txt)
+*******************************************************************************************************************************/
 #include "password.hpp"
 
 
@@ -15,6 +26,11 @@ void password::operator =(const password & rhs){
     tel10 = rhs.tel10;
 }
 
+bool password::operator>=(const password & rhs) const{
+    return(((tel876==rhs.tel876)&&(tel54 == rhs.tel54)) && (  (tel32==rhs.tel32)   &&   (tel10==rhs.tel10)  ) );
+}
+
+
 bool password::operator==(const password & rhs) const{
     bool a=0;
     bool b=0;
@@ -29,7 +45,7 @@ bool password::operator==(const password & rhs) const{
      if ((tel32<=(rhs.tel32+2))&&(tel32>=(rhs.tel32-1))){
         c=1;
     }
-     if ((tel10<=(rhs.tel10+2))&&(tel10>=(rhs.tel10-1))){
+     if ((tel10<=(rhs.tel10+3))&&(tel10>=(rhs.tel10-1))){
         d=1;
     }
     
@@ -41,13 +57,13 @@ bool password::operator==(const password & rhs) const{
     
     
     if ((summ <= sumrhs+5)&&( summ >= sumrhs - 5)){
-    if (((a==1) && (b==1))&&(( c==1)&& (d==1))){
-    
- return 1;
-    }
-    else{
-        hwlib::cout << "sum correct comparising not";
-    }
+        if (((a==1) && (b==1))&&(( c==1)&& (d==1))){
+        
+            return 1;
+        }
+        else{
+            hwlib::cout << "sum correct comparising not";
+        }
     }
     else {
         hwlib::cout<<"sum not correct";

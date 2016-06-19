@@ -7,7 +7,7 @@ void motor::turn(int degrees){
     if (degrees< MIN || degrees > MAX ){
         return;
     }
-    int width = ((degrees * 2170)/180);
+    int width = ((degrees * 2100)/180);
     
     for (int i = 0; i<20;i++){
         pulse(width);

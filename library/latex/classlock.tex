@@ -1,0 +1,84 @@
+\hypertarget{classlock}{}\section{lock Class Reference}
+\label{classlock}\index{lock@{lock}}
+
+
+lock class  
+
+
+
+
+{\ttfamily \#include $<$lock.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlock_a70661afaf29f414bf0b838dfbc9c10a6}{lock} (hwlib\+::target\+::pin\+\_\+out \&pinout, hwlib\+::target\+::pin\+\_\+in \&pinin)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{classlock_a773859340b99fff94e8a21206d5906bd}{open} ()
+\begin{DoxyCompactList}\small\item\em virtual open function \end{DoxyCompactList}\item 
+virtual void \hyperlink{classlock_a7e4aac202a1b73f57338ea7f935cf9ce}{close} ()
+\begin{DoxyCompactList}\small\item\em virtual close function \end{DoxyCompactList}\item 
+void \hyperlink{classlock_a1e203e71ff7300d4202516c1b08c3ad2}{pir} ()
+\begin{DoxyCompactList}\small\item\em pir function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+lock class 
+
+lock class combine motor class (servo) with movement class(pir) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lock@{lock}!lock@{lock}}
+\index{lock@{lock}!lock@{lock}}
+\subsubsection[{\texorpdfstring{lock(hwlib\+::target\+::pin\+\_\+out \&pinout, hwlib\+::target\+::pin\+\_\+in \&pinin)}{lock(hwlib::target::pin_out &pinout, hwlib::target::pin_in &pinin)}}]{\setlength{\rightskip}{0pt plus 5cm}lock\+::lock (
+\begin{DoxyParamCaption}
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{pinout, }
+\item[{hwlib\+::target\+::pin\+\_\+in \&}]{pinin}
+\end{DoxyParamCaption}
+)}\hypertarget{classlock_a70661afaf29f414bf0b838dfbc9c10a6}{}\label{classlock_a70661afaf29f414bf0b838dfbc9c10a6}
+
+
+default constructor 
+
+the constructor gets a pin\+\_\+out reference for the motor (move) and a pin\+\_\+in reference for the movement (see). 
+
+\subsection{Member Function Documentation}
+\index{lock@{lock}!close@{close}}
+\index{close@{close}!lock@{lock}}
+\subsubsection[{\texorpdfstring{close()}{close()}}]{\setlength{\rightskip}{0pt plus 5cm}void lock\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classlock_a7e4aac202a1b73f57338ea7f935cf9ce}{}\label{classlock_a7e4aac202a1b73f57338ea7f935cf9ce}
+
+
+virtual close function 
+
+default \+: this function closes the lock if the lock is open . it turns the motor to 90 degrees by using the turnto90 function. the function is virtual so it is possible to have an different set up with the lock \index{lock@{lock}!open@{open}}
+\index{open@{open}!lock@{lock}}
+\subsubsection[{\texorpdfstring{open()}{open()}}]{\setlength{\rightskip}{0pt plus 5cm}void lock\+::open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classlock_a773859340b99fff94e8a21206d5906bd}{}\label{classlock_a773859340b99fff94e8a21206d5906bd}
+
+
+virtual open function 
+
+this function opens the lock if the lock is closed . it turns the motor to 0 degrees by using the turnto0 function. the function is virtual so it is possible to have an different set up with the lock \index{lock@{lock}!pir@{pir}}
+\index{pir@{pir}!lock@{lock}}
+\subsubsection[{\texorpdfstring{pir()}{pir()}}]{\setlength{\rightskip}{0pt plus 5cm}void lock\+::pir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classlock_a1e203e71ff7300d4202516c1b08c3ad2}{}\label{classlock_a1e203e71ff7300d4202516c1b08c3ad2}
+
+
+pir function 
+
+this function closes the lock when someone is moving by and if the lock is open at that moment 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lock.\+hpp\item 
+lock.\+cpp\end{DoxyCompactItemize}

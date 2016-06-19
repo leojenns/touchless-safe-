@@ -7,8 +7,8 @@ int main(void)
         auto  pir = hwlib::target::pin_in(hwlib::target::pins::d6);
 lock l(servoPin,pir);
 while(1){
-    l.pir();
-
+    l.close();
+hwlib::wait_ms(1000);
     l.open();
 
     

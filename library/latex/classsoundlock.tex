@@ -1,0 +1,111 @@
+\hypertarget{classsoundlock}{}\section{soundlock Class Reference}
+\label{classsoundlock}\index{soundlock@{soundlock}}
+
+
+soundlock class  
+
+
+
+
+{\ttfamily \#include $<$sound\+\_\+lock.\+hpp$>$}
+
+Inheritance diagram for soundlock\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsoundlock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsoundlock_abcac8ac82db4e9cc69c4b0d0ac379a40}{soundlock} (hwlib\+::target\+::pin\+\_\+adc \&\hyperlink{classsound_a1b4c38e994daa1b3e9006852d3d9242a}{adc}, \hyperlink{classlock}{lock} \&\hyperlink{classsoundlock_ade415e22f230dca2d7e7f93d14cec8b6}{l})
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsoundlock_ac5e780fa2d0688bee28dbce04dd75a37}{math\+\_\+password} ()=0
+\begin{DoxyCompactList}\small\item\em vitual fuction math\+\_\+password \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsoundlock_a27ab4e3e5808d7dbc572e865a97e8f9c}{set\+\_\+password} ()=0
+\begin{DoxyCompactList}\small\item\em virtual fuction set\+\_\+passsword \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsoundlock_abca4638dd9dd78157c2c18165407965e}{compare\+\_\+password} ()=0
+\begin{DoxyCompactList}\small\item\em virtual function compare\+\_\+password \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpassword}{password} \hyperlink{classsoundlock_a3de94ef881d8470d0217276e0f613cf1}{temp}\hypertarget{classsoundlock_a3de94ef881d8470d0217276e0f613cf1}{}\label{classsoundlock_a3de94ef881d8470d0217276e0f613cf1}
+
+\begin{DoxyCompactList}\small\item\em temparary password for comparing an setting password. \end{DoxyCompactList}\item 
+\hyperlink{classlock}{lock} \& \hyperlink{classsoundlock_ade415e22f230dca2d7e7f93d14cec8b6}{l}\hypertarget{classsoundlock_ade415e22f230dca2d7e7f93d14cec8b6}{}\label{classsoundlock_ade415e22f230dca2d7e7f93d14cec8b6}
+
+\begin{DoxyCompactList}\small\item\em reference to an lock that is needed for controlling \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+soundlock class 
+
+decorator class to the sound class for controllling an lock 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{soundlock@{soundlock}!soundlock@{soundlock}}
+\index{soundlock@{soundlock}!soundlock@{soundlock}}
+\subsubsection[{\texorpdfstring{soundlock(hwlib\+::target\+::pin\+\_\+adc \&adc, lock \&l)}{soundlock(hwlib::target::pin_adc &adc, lock &l)}}]{\setlength{\rightskip}{0pt plus 5cm}soundlock\+::soundlock (
+\begin{DoxyParamCaption}
+\item[{hwlib\+::target\+::pin\+\_\+adc \&}]{adc, }
+\item[{{\bf lock} \&}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{classsoundlock_abcac8ac82db4e9cc69c4b0d0ac379a40}{}\label{classsoundlock_abcac8ac82db4e9cc69c4b0d0ac379a40}
+
+
+default constructor 
+
+theconstructor gets an reference to an analog port that is used for the analog to digital conversion . and a reference to an lock that is used to control. 
+
+\subsection{Member Function Documentation}
+\index{soundlock@{soundlock}!compare\+\_\+password@{compare\+\_\+password}}
+\index{compare\+\_\+password@{compare\+\_\+password}!soundlock@{soundlock}}
+\subsubsection[{\texorpdfstring{compare\+\_\+password()=0}{compare_password()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void soundlock\+::compare\+\_\+password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classsoundlock_abca4638dd9dd78157c2c18165407965e}{}\label{classsoundlock_abca4638dd9dd78157c2c18165407965e}
+
+
+virtual function compare\+\_\+password 
+
+default doing nothing can be set for comparing password with input 
+
+Implemented in \hyperlink{classprofile_acefbce03d19dafccbcf55c17b3527a23}{profile}.
+
+\index{soundlock@{soundlock}!math\+\_\+password@{math\+\_\+password}}
+\index{math\+\_\+password@{math\+\_\+password}!soundlock@{soundlock}}
+\subsubsection[{\texorpdfstring{math\+\_\+password()=0}{math_password()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void soundlock\+::math\+\_\+password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classsoundlock_ac5e780fa2d0688bee28dbce04dd75a37}{}\label{classsoundlock_ac5e780fa2d0688bee28dbce04dd75a37}
+
+
+vitual fuction math\+\_\+password 
+
+default doing nothing can be set for calculating password for lock 
+
+Implemented in \hyperlink{classprofile_a85a7931430f0cc2abc94253548b9cb37}{profile}.
+
+\index{soundlock@{soundlock}!set\+\_\+password@{set\+\_\+password}}
+\index{set\+\_\+password@{set\+\_\+password}!soundlock@{soundlock}}
+\subsubsection[{\texorpdfstring{set\+\_\+password()=0}{set_password()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void soundlock\+::set\+\_\+password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classsoundlock_a27ab4e3e5808d7dbc572e865a97e8f9c}{}\label{classsoundlock_a27ab4e3e5808d7dbc572e865a97e8f9c}
+
+
+virtual fuction set\+\_\+passsword 
+
+default doing nothing can be set for setting te password for the lock 
+
+Implemented in \hyperlink{classprofile_aa46b5ea874a915a76a54c4ce7fa9701c}{profile}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sound\+\_\+lock.\+hpp\item 
+sound\+\_\+lock.\+cpp\end{DoxyCompactItemize}

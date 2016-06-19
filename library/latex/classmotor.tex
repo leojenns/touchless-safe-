@@ -1,0 +1,89 @@
+\hypertarget{classmotor}{}\section{motor Class Reference}
+\label{classmotor}\index{motor@{motor}}
+
+
+class for control of 9g\+\_\+servo  
+
+
+
+
+{\ttfamily \#include $<$motor\+\_\+g9.\+hpp$>$}
+
+Inheritance diagram for motor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmotor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmotor_a2a03c0b137ceaf886d406f55bc1dfc6d}{motor} (hwlib\+::target\+::pin\+\_\+out \&pwmpin)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+void \hyperlink{classmotor_a4d056e4f75a5613ef50a4ae4ed95525d}{turn} (int degrees)
+\begin{DoxyCompactList}\small\item\em turn the servo to an desired amount of degrees. \end{DoxyCompactList}\item 
+void \hyperlink{classmotor_a942b9474ad3226a035908333d5d09a86}{turnto0} ()
+\begin{DoxyCompactList}\small\item\em turnto0 function \end{DoxyCompactList}\item 
+void \hyperlink{classmotor_a8983111ce2a6fb60d1ef4d26028981c8}{turnto90} ()
+\begin{DoxyCompactList}\small\item\em turnto0 function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class for control of 9g\+\_\+servo 
+
+this class is an decorator class to the pwm class in this class the pulse function is used to create the signal used for the \hyperlink{classservo}{servo( 9g analog)} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{motor@{motor}!motor@{motor}}
+\index{motor@{motor}!motor@{motor}}
+\subsubsection[{\texorpdfstring{motor(hwlib\+::target\+::pin\+\_\+out \&pwmpin)}{motor(hwlib::target::pin_out &pwmpin)}}]{\setlength{\rightskip}{0pt plus 5cm}motor\+::motor (
+\begin{DoxyParamCaption}
+\item[{hwlib\+::target\+::pin\+\_\+out \&}]{pwmpin}
+\end{DoxyParamCaption}
+)}\hypertarget{classmotor_a2a03c0b137ceaf886d406f55bc1dfc6d}{}\label{classmotor_a2a03c0b137ceaf886d406f55bc1dfc6d}
+
+
+default constructor 
+
+the constructor gets an reference to the ouput pin used for the pwm signal used for the servo 
+
+\subsection{Member Function Documentation}
+\index{motor@{motor}!turn@{turn}}
+\index{turn@{turn}!motor@{motor}}
+\subsubsection[{\texorpdfstring{turn(int degrees)}{turn(int degrees)}}]{\setlength{\rightskip}{0pt plus 5cm}void motor\+::turn (
+\begin{DoxyParamCaption}
+\item[{int}]{degrees}
+\end{DoxyParamCaption}
+)}\hypertarget{classmotor_a4d056e4f75a5613ef50a4ae4ed95525d}{}\label{classmotor_a4d056e4f75a5613ef50a4ae4ed95525d}
+
+
+turn the servo to an desired amount of degrees. 
+
+turn function gets an amount of degrees and calculates the correct value for the wait in the pulse function \index{motor@{motor}!turnto0@{turnto0}}
+\index{turnto0@{turnto0}!motor@{motor}}
+\subsubsection[{\texorpdfstring{turnto0()}{turnto0()}}]{\setlength{\rightskip}{0pt plus 5cm}void motor\+::turnto0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmotor_a942b9474ad3226a035908333d5d09a86}{}\label{classmotor_a942b9474ad3226a035908333d5d09a86}
+
+
+turnto0 function 
+
+this function uses the turn function and is pre set to turn the servo to 0 degrees in contrast to the turnto90 function \index{motor@{motor}!turnto90@{turnto90}}
+\index{turnto90@{turnto90}!motor@{motor}}
+\subsubsection[{\texorpdfstring{turnto90()}{turnto90()}}]{\setlength{\rightskip}{0pt plus 5cm}void motor\+::turnto90 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmotor_a8983111ce2a6fb60d1ef4d26028981c8}{}\label{classmotor_a8983111ce2a6fb60d1ef4d26028981c8}
+
+
+turnto0 function 
+
+this function uses the turn function and is pre set to turn the servo to 90 degree in contrast to the turnto0 function 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+motor\+\_\+g9.\+hpp\item 
+motor\+\_\+g9.\+cpp\end{DoxyCompactItemize}

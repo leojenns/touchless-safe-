@@ -1,0 +1,157 @@
+\hypertarget{classprofile}{}\section{profile Class Reference}
+\label{classprofile}\index{profile@{profile}}
+
+
+class profile  
+
+
+
+
+{\ttfamily \#include $<$profile.\+hpp$>$}
+
+Inheritance diagram for profile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classprofile}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classprofile_aa556404d805d160561f593b02789c5d6}{profile} (hwlib\+::target\+::pin\+\_\+adc \&\hyperlink{classsound_a1b4c38e994daa1b3e9006852d3d9242a}{adc}, \hyperlink{classlock}{lock} \&\hyperlink{classsoundlock_ade415e22f230dca2d7e7f93d14cec8b6}{l})
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+void \hyperlink{classprofile_acefbce03d19dafccbcf55c17b3527a23}{compare\+\_\+password} () override
+\begin{DoxyCompactList}\small\item\em function compare\+\_\+password \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classprofile_aa46b5ea874a915a76a54c4ce7fa9701c}{set\+\_\+password} () override
+\begin{DoxyCompactList}\small\item\em function set\+\_\+password \end{DoxyCompactList}\item 
+void \hyperlink{classprofile_a85a7931430f0cc2abc94253548b9cb37}{math\+\_\+password} () override
+\begin{DoxyCompactList}\small\item\em funtion math\+\_\+password \end{DoxyCompactList}\item 
+void \hyperlink{classprofile_a5cd64e12649b049cfee501c2e976bd96}{measure} () override
+\begin{DoxyCompactList}\small\item\em funcion measure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpassword}{password} \hyperlink{classprofile_afbf1e7946aa806c96044b94349a4bdad}{p}
+\begin{DoxyCompactList}\small\item\em password p \end{DoxyCompactList}\item 
+bool \hyperlink{classprofile_a82b3f6d034c00c6e180a3df4c46ce0f8}{set\+\_\+p} =0
+\begin{DoxyCompactList}\small\item\em bool set\+\_\+p \end{DoxyCompactList}\item 
+bool \hyperlink{classprofile_a0a35d68e263091faa4f4855f27ef3f38}{set\+\_\+p\+\_\+run} =0
+\begin{DoxyCompactList}\small\item\em bool set\+\_\+p\+\_\+run \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class profile 
+
+this class is an decorator for the soundlock class so it is possible to have different passwords on the same lock 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{profile@{profile}!profile@{profile}}
+\index{profile@{profile}!profile@{profile}}
+\subsubsection[{\texorpdfstring{profile(hwlib\+::target\+::pin\+\_\+adc \&adc, lock \&l)}{profile(hwlib::target::pin_adc &adc, lock &l)}}]{\setlength{\rightskip}{0pt plus 5cm}profile\+::profile (
+\begin{DoxyParamCaption}
+\item[{hwlib\+::target\+::pin\+\_\+adc \&}]{adc, }
+\item[{{\bf lock} \&}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{classprofile_aa556404d805d160561f593b02789c5d6}{}\label{classprofile_aa556404d805d160561f593b02789c5d6}
+
+
+default constructor 
+
+the constuctor gets an reference to an analog pin used for analog to digital conversion and anreference to an lock needed for the soundlock function. 
+
+\subsection{Member Function Documentation}
+\index{profile@{profile}!compare\+\_\+password@{compare\+\_\+password}}
+\index{compare\+\_\+password@{compare\+\_\+password}!profile@{profile}}
+\subsubsection[{\texorpdfstring{compare\+\_\+password() override}{compare_password() override}}]{\setlength{\rightskip}{0pt plus 5cm}void profile\+::compare\+\_\+password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classprofile_acefbce03d19dafccbcf55c17b3527a23}{}\label{classprofile_acefbce03d19dafccbcf55c17b3527a23}
+
+
+function compare\+\_\+password 
+
+this function is the override for the virtual compare \+\_\+password function in soundlock this function compares the temp password with the set password p. if there isn\textquotesingle{}t set an password then it redirect to set\+\_\+password function 
+
+Implements \hyperlink{classsoundlock_abca4638dd9dd78157c2c18165407965e}{soundlock}.
+
+\index{profile@{profile}!math\+\_\+password@{math\+\_\+password}}
+\index{math\+\_\+password@{math\+\_\+password}!profile@{profile}}
+\subsubsection[{\texorpdfstring{math\+\_\+password() override}{math_password() override}}]{\setlength{\rightskip}{0pt plus 5cm}void profile\+::math\+\_\+password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classprofile_a85a7931430f0cc2abc94253548b9cb37}{}\label{classprofile_a85a7931430f0cc2abc94253548b9cb37}
+
+
+funtion math\+\_\+password 
+
+this function is the override for the virtual math \+\_\+password function in soundlock the calculation makes from the 1000 measure numbers ( see measure function ) an password and pleases it into the temporary password temp; 
+
+Implements \hyperlink{classsoundlock_ac5e780fa2d0688bee28dbce04dd75a37}{soundlock}.
+
+\index{profile@{profile}!measure@{measure}}
+\index{measure@{measure}!profile@{profile}}
+\subsubsection[{\texorpdfstring{measure() override}{measure() override}}]{\setlength{\rightskip}{0pt plus 5cm}void profile\+::measure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classprofile_a5cd64e12649b049cfee501c2e976bd96}{}\label{classprofile_a5cd64e12649b049cfee501c2e976bd96}
+
+
+funcion measure 
+
+this function is the override for the virtual measre function in sound
+
+it measures 100.\+000 times and it amplifies the usable numbers and after that it transforms it into an integer array measurment\mbox{[}\mbox{]} containing 1000 numbers 
+
+Reimplemented from \hyperlink{classsound_a40bc8ced8bd7071f1c727a9d4845aade}{sound}.
+
+\index{profile@{profile}!set\+\_\+password@{set\+\_\+password}}
+\index{set\+\_\+password@{set\+\_\+password}!profile@{profile}}
+\subsubsection[{\texorpdfstring{set\+\_\+password() override}{set_password() override}}]{\setlength{\rightskip}{0pt plus 5cm}void profile\+::set\+\_\+password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classprofile_aa46b5ea874a915a76a54c4ce7fa9701c}{}\label{classprofile_aa46b5ea874a915a76a54c4ce7fa9701c}
+
+
+function set\+\_\+password 
+
+this function is the override for the virtual set\+\_\+password function in soundlock it set the password p by measuring 6x times and makingfrom tht the password. 
+
+Implements \hyperlink{classsoundlock_a27ab4e3e5808d7dbc572e865a97e8f9c}{soundlock}.
+
+
+
+\subsection{Member Data Documentation}
+\index{profile@{profile}!p@{p}}
+\index{p@{p}!profile@{profile}}
+\subsubsection[{\texorpdfstring{p}{p}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf password} profile\+::p\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classprofile_afbf1e7946aa806c96044b94349a4bdad}{}\label{classprofile_afbf1e7946aa806c96044b94349a4bdad}
+
+
+password p 
+
+the password that belongs to the profile \index{profile@{profile}!set\+\_\+p@{set\+\_\+p}}
+\index{set\+\_\+p@{set\+\_\+p}!profile@{profile}}
+\subsubsection[{\texorpdfstring{set\+\_\+p}{set_p}}]{\setlength{\rightskip}{0pt plus 5cm}bool profile\+::set\+\_\+p =0\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classprofile_a82b3f6d034c00c6e180a3df4c46ce0f8}{}\label{classprofile_a82b3f6d034c00c6e180a3df4c46ce0f8}
+
+
+bool set\+\_\+p 
+
+ths bool is for the status if the password is already set or not \index{profile@{profile}!set\+\_\+p\+\_\+run@{set\+\_\+p\+\_\+run}}
+\index{set\+\_\+p\+\_\+run@{set\+\_\+p\+\_\+run}!profile@{profile}}
+\subsubsection[{\texorpdfstring{set\+\_\+p\+\_\+run}{set_p_run}}]{\setlength{\rightskip}{0pt plus 5cm}bool profile\+::set\+\_\+p\+\_\+run =0\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classprofile_a0a35d68e263091faa4f4855f27ef3f38}{}\label{classprofile_a0a35d68e263091faa4f4855f27ef3f38}
+
+
+bool set\+\_\+p\+\_\+run 
+
+this bool is for the status if the password is beeing set at the moment . 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+profile.\+hpp\item 
+profile.\+cpp\end{DoxyCompactItemize}

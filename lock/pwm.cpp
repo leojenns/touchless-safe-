@@ -8,6 +8,6 @@ void pwm::pulse(int width){
     pwmpin.set(1);
 	hwlib::wait_us(width);
 	pwmpin.set(0);
-	hwlib::wait_ms(20);
+	hwlib::wait_ms(19);
     
 }
