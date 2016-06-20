@@ -15,6 +15,8 @@ keypad class
 \hyperlink{classkeypad_a6e342bf7c51143f25a84db9e0992039b}{keypad} (hwlib\+::target\+::pin\+\_\+out \&c1, hwlib\+::target\+::pin\+\_\+out \&c2, hwlib\+::target\+::pin\+\_\+out \&c3, hwlib\+::target\+::pin\+\_\+out \&c4, hwlib\+::target\+::pin\+\_\+in \&r1, hwlib\+::target\+::pin\+\_\+in \&r2, hwlib\+::target\+::pin\+\_\+in \&r3, hwlib\+::target\+::pin\+\_\+in \&r4)
 \begin{DoxyCompactList}\small\item\em the default constructor \end{DoxyCompactList}\item 
 int \hyperlink{classkeypad_a2a1334d93f32abfe59930a35b61bdbba}{input} ()
+\begin{DoxyCompactList}\small\item\em int input function. \end{DoxyCompactList}\item 
+int \hyperlink{classkeypad_a2ae7159fe81ba33ee01b62688ad6e860}{input\+\_\+wait} ()
 \begin{DoxyCompactList}\small\item\em int input function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -56,7 +58,18 @@ the constructor gets eigth pins in referrence four pins are input and four pins 
 
 int input function. 
 
-gives the value back that the position contains out the matrix that is equal to the position that is pressed. 
+gives the value back that the position contains out the matrix that is equal to the position that is pressed. \index{keypad@{keypad}!input\+\_\+wait@{input\+\_\+wait}}
+\index{input\+\_\+wait@{input\+\_\+wait}!keypad@{keypad}}
+\subsubsection[{\texorpdfstring{input\+\_\+wait()}{input_wait()}}]{\setlength{\rightskip}{0pt plus 5cm}int keypad\+::input\+\_\+wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classkeypad_a2ae7159fe81ba33ee01b62688ad6e860}{}\label{classkeypad_a2ae7159fe81ba33ee01b62688ad6e860}
+
+
+int input function. 
+
+gives the value back that the position contains out the matrix that is equal to the position that is pressed deferend with void \hyperlink{classkeypad_a2a1334d93f32abfe59930a35b61bdbba}{input()} is this function\+\_\+waits until key is pressed. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

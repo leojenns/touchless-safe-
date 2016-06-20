@@ -1,46 +1,41 @@
-/****************************************************************************************************************************
-*  auther ::       Leo Jenneskens                                                                                                                                                                                                  
-* File ::              system.cpp                                                                                                                                                                                                            
-* Date::           18 - june - 2016                                                                                                                                                                                                   
-* copyright:    Leo Jenneskens 2016
-*                                                                                                                                                                                                                                                    
-*  Distributed under the Boost Software License, Version 1.0.
-* (See accompanying file LICENSE_1_0.txt or copy at 
-* http://www.boost.org/LICENSE_1_0.txt)
-*******************************************************************************************************************************/
 #include "system.hpp"
 
 system::system(hwlib::target::pin_adc & adc,keypad & k,lock & l):
-A(adc,l,k),B(adc,l,k),C(adc,l,k),D(adc,l,k),Q(l,k),k(k),l(l){}
+A(adc,l,k),
+A1(adc,l,k),
+A2(adc,l,k),
+AD(l,k),
+k(k),
+l(l)
+{}
 
 
-void system::run(){
+void system::start(){
+    
     hwlib::cout<<"welcome to touchless safe \n";
     hwlib::cout <<"choose an profile or admin \n";
-    
+
 while(1){
     int value = k.input();
     
 if (value == 'A'){
     hwlib::cout<< "profile A\n";
     A.compare_password();
-    
+
 }
 else if(value == 'B'){
      hwlib::cout<< "profile B\n";
-    B.compare_password();
+    A1.compare_password();
 }
 else if(value == 'C'){
      hwlib::cout<< "profile C\n";
-    C.compare_password();
+    A2.compare_password();
 }
-else if(value == 'D'){
-     hwlib::cout<< "profile D\n";
-    D.compare_password();
-}
-else if (value == '*'){
+
+else if (value == 'D'){
      hwlib::cout<< "admin\n";
-     Q.admin_menu();
+     hwlib::wait_ms(500);
+     AD.admin_menu();
 }
     l.pir();
     

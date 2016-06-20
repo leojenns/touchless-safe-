@@ -10,30 +10,43 @@
 *******************************************************************************************************************************/
 #ifndef SYSTEM_HPP
 #define SYSTEM_HPP
-#include "hwlib.hpp"
-#include "admin.hpp"
-#include "lock.hpp"
-#include "keypad.hpp"
+
 #include "profile.hpp"
-#include "sound.hpp"
- class system{
-private:
-    profile &A;
-    profile & B;
-    profile &C;
-    profile & D;
-    admin & Q;
-    keypad & k;
-    lock & l;
+
+#include "hwlib.hpp"
+
+#include "touchless_safe.hpp"
+
+/// system class
+//
+/// class that act as an application  that runs with use of this library
+class system{
+protected:
+///three  profiles
+//
+profile A,A1,A2;
+/// admin
+admin AD;
+/// reference to keyboard
+keypad & k;
+///reference to lock
+lock & l;
+public:
+/// default constructor
+//
+/// this constructor gets an analog pin that is used for analog to digital conversion.
+/// second it gets an reference to keypad that is installed .
+/// third it gets an reference to lock that is installed
+system(hwlib::target::pin_adc & adc, keypad & k, lock & l);
+/// start function
+//
+/// this function starts the system and contains an basic menu
+/// where the user can choise an profile or admin
+/// also it includes the pir function from the lock 
+/// that detects movement and closes the lockwhen there is detection.
+void start();
     
-
-public: 
-system(hwlib::target::pin_adc & adc,keypad & k,lock & l);
-
-
-void run();
-
- 
- };
-
+    
+    
+};
 #endif

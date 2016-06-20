@@ -30,9 +30,11 @@ void motor::turn(int degrees){
 
 void motor::turnto0(){
     turn(80);
+    //wait for 0.5 second
     hwlib::wait_ms(500);
 }
 void motor::turnto90(){
     turn(170);
+    //wait for 0.5 second
     hwlib::wait_ms(500);
 }

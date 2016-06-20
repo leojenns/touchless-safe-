@@ -21,11 +21,11 @@ int main(void)
         auto row3  = target::pin_in( target::pins::d47);
         auto row4  = target::pin_in( target::pins::d46);
  
-        
+keypad j(col1,col2,col3,col4,row1,row2,row3,row4);       
 lock l(servoPin,pir);
-keypad j(col1,col2,col3,col4,row1,row2,row3,row4);
-system s(adc0,j,l);
-s.run();
 
+system S(adc0,j,l);
+S.start();
 
+return 0;
 }

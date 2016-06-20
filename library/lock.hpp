@@ -17,16 +17,16 @@
 /// lock class 
 //
 /// lock class combine motor class (servo) with movement class(pir)
-class lock {
+class lock:public motor ,movement {
 private:
 /// movement see
 //
 ///movement see is for the pir sensor used in this class 
-movement see;
+//movement see;
 /// motor move 
 //
 /// motor move  is  the servo used in this class to open and close.
-motor move;
+//motor move;
 /// bool status
 //
 /// this bool indicates the status of the  lock (open or close).
@@ -37,21 +37,21 @@ public:
 /// the constructor gets a pin_out reference for the motor (move)  and 
 ///  a pin_in reference for the movement (see).
 lock(hwlib::target::pin_out & pinout, hwlib::target::pin_in & pinin );
-/// virtual open function
+///  open function
 //
 
 /// this function  opens the lock if the lock is closed .
 ///  it turns the motor to 0 degrees by using the turnto0 function.
 /// the function is virtual so it is possible to have an different  set up with the lock 
 
-virtual void open();
-/// virtual  close function
+ void open();
+///   close function
 //
 
 ///default : this function closes the lock if the lock is open . 
 ///  it turns the motor to 90 degrees by using the turnto90 function.
 /// the function is virtual so it is possible to have an different  set up with the lock 
-virtual void close();
+ void close();
 ///   pir function
 //
 /// this function closes the lock when someone is moving by and  if the lock is open at that moment 

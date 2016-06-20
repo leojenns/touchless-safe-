@@ -18,7 +18,7 @@ Inheritance diagram for profile\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classprofile_aa556404d805d160561f593b02789c5d6}{profile} (hwlib\+::target\+::pin\+\_\+adc \&\hyperlink{classsound_a1b4c38e994daa1b3e9006852d3d9242a}{adc}, \hyperlink{classlock}{lock} \&\hyperlink{classsoundlock_ade415e22f230dca2d7e7f93d14cec8b6}{l})
+\hyperlink{classprofile_a2cb04cbe48d335a623498255f4d4797a}{profile} (hwlib\+::target\+::pin\+\_\+adc \&\hyperlink{classsound_a1b4c38e994daa1b3e9006852d3d9242a}{adc}, \hyperlink{classlock}{lock} \&\hyperlink{classsoundlock_ade415e22f230dca2d7e7f93d14cec8b6}{l}, \hyperlink{classkeypad}{keypad} \&\hyperlink{classprofile_a0484e7cb5d93f01f21ad7cf8835c5ef9}{k})
 \begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
 void \hyperlink{classprofile_acefbce03d19dafccbcf55c17b3527a23}{compare\+\_\+password} () override
 \begin{DoxyCompactList}\small\item\em function compare\+\_\+password \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -36,10 +36,14 @@ void \hyperlink{classprofile_a5cd64e12649b049cfee501c2e976bd96}{measure} () over
 \item 
 \hyperlink{classpassword}{password} \hyperlink{classprofile_afbf1e7946aa806c96044b94349a4bdad}{p}
 \begin{DoxyCompactList}\small\item\em password p \end{DoxyCompactList}\item 
+\hyperlink{classkeypad}{keypad} \& \hyperlink{classprofile_a0484e7cb5d93f01f21ad7cf8835c5ef9}{k}\hypertarget{classprofile_a0484e7cb5d93f01f21ad7cf8835c5ef9}{}\label{classprofile_a0484e7cb5d93f01f21ad7cf8835c5ef9}
+
+\begin{DoxyCompactList}\small\item\em reference to keypad \end{DoxyCompactList}\item 
 bool \hyperlink{classprofile_a82b3f6d034c00c6e180a3df4c46ce0f8}{set\+\_\+p} =0
 \begin{DoxyCompactList}\small\item\em bool set\+\_\+p \end{DoxyCompactList}\item 
 bool \hyperlink{classprofile_a0a35d68e263091faa4f4855f27ef3f38}{set\+\_\+p\+\_\+run} =0
 \begin{DoxyCompactList}\small\item\em bool set\+\_\+p\+\_\+run \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
@@ -50,12 +54,13 @@ this class is an decorator for the soundlock class so it is possible to have dif
 \subsection{Constructor \& Destructor Documentation}
 \index{profile@{profile}!profile@{profile}}
 \index{profile@{profile}!profile@{profile}}
-\subsubsection[{\texorpdfstring{profile(hwlib\+::target\+::pin\+\_\+adc \&adc, lock \&l)}{profile(hwlib::target::pin_adc &adc, lock &l)}}]{\setlength{\rightskip}{0pt plus 5cm}profile\+::profile (
+\subsubsection[{\texorpdfstring{profile(hwlib\+::target\+::pin\+\_\+adc \&adc, lock \&l, keypad \&k)}{profile(hwlib::target::pin_adc &adc, lock &l, keypad &k)}}]{\setlength{\rightskip}{0pt plus 5cm}profile\+::profile (
 \begin{DoxyParamCaption}
 \item[{hwlib\+::target\+::pin\+\_\+adc \&}]{adc, }
-\item[{{\bf lock} \&}]{l}
+\item[{{\bf lock} \&}]{l, }
+\item[{{\bf keypad} \&}]{k}
 \end{DoxyParamCaption}
-)}\hypertarget{classprofile_aa556404d805d160561f593b02789c5d6}{}\label{classprofile_aa556404d805d160561f593b02789c5d6}
+)}\hypertarget{classprofile_a2cb04cbe48d335a623498255f4d4797a}{}\label{classprofile_a2cb04cbe48d335a623498255f4d4797a}
 
 
 default constructor 

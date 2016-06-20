@@ -1,0 +1,87 @@
+\hypertarget{classadmin}{}\section{admin Class Reference}
+\label{classadmin}\index{admin@{admin}}
+
+
+class admin  
+
+
+
+
+{\ttfamily \#include $<$admin.\+hpp$>$}
+
+Inheritance diagram for admin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classadmin}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries admin} (\hyperlink{classlock}{lock} \&l, \hyperlink{classkeypad}{keypad} \&\hyperlink{classadmin_a945025347c265cad582b368ceca788c3}{k})\hypertarget{classadmin_a16cc376ed398bdf439973cacec5923ff}{}\label{classadmin_a16cc376ed398bdf439973cacec5923ff}
+
+\item 
+void \hyperlink{classadmin_a23a0137ba1609edd2f6b6f18eeaac975}{admin\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em admin\+\_\+menu function \end{DoxyCompactList}\item 
+void \hyperlink{classadmin_a08aa886747be71f7916e8cc6c0806c2f}{admin\+\_\+wait} ()
+\begin{DoxyCompactList}\small\item\em admin\+\_\+wait function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classadmin_a20b580f1add145870f3b14944b4edf1a}{admin\+\_\+login} (\hyperlink{classpassword}{password} \&t)\hypertarget{classadmin_a20b580f1add145870f3b14944b4edf1a}{}\label{classadmin_a20b580f1add145870f3b14944b4edf1a}
+
+\begin{DoxyCompactList}\small\item\em bool function for admin login \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpassword}{password} \hyperlink{classadmin_a1d06b76a2e4750d8c98472cb0ae30f4f}{p} = \hyperlink{classpassword}{password}(1,2,3,4)
+\begin{DoxyCompactList}\small\item\em password p \end{DoxyCompactList}\item 
+\hyperlink{classkeypad}{keypad} \& \hyperlink{classadmin_a945025347c265cad582b368ceca788c3}{k}\hypertarget{classadmin_a945025347c265cad582b368ceca788c3}{}\label{classadmin_a945025347c265cad582b368ceca788c3}
+
+\begin{DoxyCompactList}\small\item\em reference to keypad \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class admin 
+
+this class is an decorator for the soundlock class so it is possible to have different passwords on the same lock 
+
+\subsection{Member Function Documentation}
+\index{admin@{admin}!admin\+\_\+menu@{admin\+\_\+menu}}
+\index{admin\+\_\+menu@{admin\+\_\+menu}!admin@{admin}}
+\subsubsection[{\texorpdfstring{admin\+\_\+menu()}{admin_menu()}}]{\setlength{\rightskip}{0pt plus 5cm}void admin\+::admin\+\_\+menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classadmin_a23a0137ba1609edd2f6b6f18eeaac975}{}\label{classadmin_a23a0137ba1609edd2f6b6f18eeaac975}
+
+
+admin\+\_\+menu function 
+
+this function is the menu for admin \index{admin@{admin}!admin\+\_\+wait@{admin\+\_\+wait}}
+\index{admin\+\_\+wait@{admin\+\_\+wait}!admin@{admin}}
+\subsubsection[{\texorpdfstring{admin\+\_\+wait()}{admin_wait()}}]{\setlength{\rightskip}{0pt plus 5cm}void admin\+::admin\+\_\+wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classadmin_a08aa886747be71f7916e8cc6c0806c2f}{}\label{classadmin_a08aa886747be71f7916e8cc6c0806c2f}
+
+
+admin\+\_\+wait function 
+
+keep lock closed until password is put in 
+
+\subsection{Member Data Documentation}
+\index{admin@{admin}!p@{p}}
+\index{p@{p}!admin@{admin}}
+\subsubsection[{\texorpdfstring{p}{p}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf password} admin\+::p = {\bf password}(1,2,3,4)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classadmin_a1d06b76a2e4750d8c98472cb0ae30f4f}{}\label{classadmin_a1d06b76a2e4750d8c98472cb0ae30f4f}
+
+
+password p 
+
+the password that belongs to the admin 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+admin.\+hpp\item 
+admin.\+cpp\end{DoxyCompactItemize}

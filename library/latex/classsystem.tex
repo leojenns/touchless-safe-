@@ -1,0 +1,80 @@
+\hypertarget{classsystem}{}\section{system Class Reference}
+\label{classsystem}\index{system@{system}}
+
+
+system class  
+
+
+
+
+{\ttfamily \#include $<$system.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsystem_a46d824d1080e04824d21bf851bfdff61}{system} (hwlib\+::target\+::pin\+\_\+adc \&adc, \hyperlink{classkeypad}{keypad} \&\hyperlink{classsystem_a8f63afc4e8e5cbd5b359b7b67d05ddcf}{k}, \hyperlink{classlock}{lock} \&\hyperlink{classsystem_a04508082c7cd8057141df6756329d8d1}{l})
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+void \hyperlink{classsystem_aa349f5fddd1cb2662e3f753c4669b03a}{start} ()
+\begin{DoxyCompactList}\small\item\em start function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classprofile}{profile} \hyperlink{classsystem_a3c26dc3758d838e0b8f2233b7d9dfb3e}{A}\hypertarget{classsystem_a3c26dc3758d838e0b8f2233b7d9dfb3e}{}\label{classsystem_a3c26dc3758d838e0b8f2233b7d9dfb3e}
+
+\begin{DoxyCompactList}\small\item\em three profiles \end{DoxyCompactList}\item 
+\hyperlink{classprofile}{profile} {\bfseries A1}\hypertarget{classsystem_a18fe7315f4fd2073f4d74dd0110eb8bd}{}\label{classsystem_a18fe7315f4fd2073f4d74dd0110eb8bd}
+
+\item 
+\hyperlink{classprofile}{profile} {\bfseries A2}\hypertarget{classsystem_acc111b300ae91767f1badecb7884f376}{}\label{classsystem_acc111b300ae91767f1badecb7884f376}
+
+\item 
+\hyperlink{classadmin}{admin} \hyperlink{classsystem_aef5e8502943f8b3bb8c6e6b260b2d25e}{AD}\hypertarget{classsystem_aef5e8502943f8b3bb8c6e6b260b2d25e}{}\label{classsystem_aef5e8502943f8b3bb8c6e6b260b2d25e}
+
+\begin{DoxyCompactList}\small\item\em admin \end{DoxyCompactList}\item 
+\hyperlink{classkeypad}{keypad} \& \hyperlink{classsystem_a8f63afc4e8e5cbd5b359b7b67d05ddcf}{k}\hypertarget{classsystem_a8f63afc4e8e5cbd5b359b7b67d05ddcf}{}\label{classsystem_a8f63afc4e8e5cbd5b359b7b67d05ddcf}
+
+\begin{DoxyCompactList}\small\item\em reference to keyboard \end{DoxyCompactList}\item 
+\hyperlink{classlock}{lock} \& \hyperlink{classsystem_a04508082c7cd8057141df6756329d8d1}{l}\hypertarget{classsystem_a04508082c7cd8057141df6756329d8d1}{}\label{classsystem_a04508082c7cd8057141df6756329d8d1}
+
+\begin{DoxyCompactList}\small\item\em reference to lock \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+system class 
+
+class that act as an application that runs with use of this library 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{system@{system}!system@{system}}
+\index{system@{system}!system@{system}}
+\subsubsection[{\texorpdfstring{system(hwlib\+::target\+::pin\+\_\+adc \&adc, keypad \&k, lock \&l)}{system(hwlib::target::pin_adc &adc, keypad &k, lock &l)}}]{\setlength{\rightskip}{0pt plus 5cm}system\+::system (
+\begin{DoxyParamCaption}
+\item[{hwlib\+::target\+::pin\+\_\+adc \&}]{adc, }
+\item[{{\bf keypad} \&}]{k, }
+\item[{{\bf lock} \&}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{classsystem_a46d824d1080e04824d21bf851bfdff61}{}\label{classsystem_a46d824d1080e04824d21bf851bfdff61}
+
+
+default constructor 
+
+this constructor gets an analog pin that is used for analog to digital conversion. second it gets an reference to keypad that is installed . third it gets an reference to lock that is installed 
+
+\subsection{Member Function Documentation}
+\index{system@{system}!start@{start}}
+\index{start@{start}!system@{system}}
+\subsubsection[{\texorpdfstring{start()}{start()}}]{\setlength{\rightskip}{0pt plus 5cm}void system\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classsystem_aa349f5fddd1cb2662e3f753c4669b03a}{}\label{classsystem_aa349f5fddd1cb2662e3f753c4669b03a}
+
+
+start function 
+
+this function starts the system and contains an basic menu where the user can choise an profile or admin also it includes the pir function from the lock that detects movement and closes the lockwhen there is detection. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+system.\+hpp\item 
+system.\+cpp\end{DoxyCompactItemize}

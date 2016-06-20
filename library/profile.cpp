@@ -13,20 +13,23 @@
 profile::profile(hwlib::target::pin_adc & adc,lock & l,keypad & k):
 soundlock(adc,l),k(k)
 {}
+
+
 void profile::measure() {
     int samplesum=0;
     int counter_sample;
     int sample=0;
     int x=0;
+    /// clean measurment
     for (int ic = 0;ic<array_number;ic++){
         measurment[ic]=0;
     }
-    
+    /// set array_number on 0 for new measurement
     array_number=0;
     
     while(x < 100000LL){  
         sample = adc.get();  
-        
+        /// amplify signal 
         if (counter_sample<100&& sample >2800){
              samplesum += 3*sample;
             counter_sample ++;
@@ -44,39 +47,69 @@ void profile::measure() {
         x++;  
    }
    
-   return;
+   
    }
+   
+   
 void profile::math_password(){
-    
+    /// check if password is set
     if (set_p==0&&set_p_run==0){
         set_password();
         array_number = 0;
     }
+    /// needed variables
+    
+    /// integer array needed for algorithm
     int array2[(array_number/2)];
+    /// integer array needed for algorithm
     int array3[(array_number/4)];
+    /// integer array needed for algorithm
     int array4[(array_number/18)];
+    /// integer array needed for algorithm
     int array5[(array_number/18)];
-   
+    /// integer array needed for algorithm
+    int arraypass[100];
+    /// integer variable  used as counter to eliminate useless zeros
+    int c=0;
+    /// counter for useless zeros  before tone
+    int tel_zero= 0;
+       /// counter for useless zeros  after tone
+    int telback_zero=0;
+    /// password integer
+     int tel876=0;
+         /// password integer
+    int tel54=0;
+        /// password integer
+    int tel32=0;
+        /// password integer
+    int tel10=0;
+    /// step one  algorithm (sum two numbers divide with 2 )
    for(int i =0;i<array_number;i+=2){
         array2[i/2]=(measurment[i]+measurment[i+1])/2;
     }
    
-  
+  /// step two  algorithm (sum two numbers divide with 2  again )
     for(int i =0;i<(array_number/2);i+=2){
         array3[i/2]=(array2[i]+array2[i+1])/2;
     }
+    /// step three  algorithm (sum three numbers divide with 3  again )
       for(int i =0;i<(array_number/6);i+=3){
         array4[i/3]=(array3[i]+array3[i+1]+array3[i+2])/3;
     }
      
    
     
-    
+    /// step four algorithm( all the numbers lower then 3000 make 3000)
     for(int i =0;i<(array_number/18);i++){
         if (array4[i]<3000){
             array4[i]=3000;
         }
     }
+    /// step five algorithm
+    //
+    /// make from 3000>
+    /// numbers between 0 and 8 
+    /// 3000 = 0   -   3250 = 1  -  3500 = 2 etc.
     for(int i =0;i<(array_number/18);i++){
         if (array4[i]==3000){
                 array5[i]=0;
@@ -106,48 +139,44 @@ void profile::math_password(){
                 array5[i] = 8;
         }
     }
-    int arraypass[100];
-    int k = 0;
-    int c=0;
-    int tel= 0;
-    int telback=0;
-    while (k==0){
-      //  hwlib::cout<<"pass";
+/// step six algorithm  part 1
+/// count useless zero created  during measurment  before tone
+    while (1){
+
         if (array5[c] !=0){
             break;
         }
         else{
-            tel++;
+            tel_zero++;
         }
         c++;
     }
     c=2;
-    k = 0;
-
-    while (k==0){
+   /// step six algorithm  part 2
+/// count useless zero created  during measurment after tone
+    while (1){
 
         if (array5[(array_number/18)-c] !=0){
             break;
         }
         else{
-            telback++;
+            telback_zero++;
         }
         c++;
     }
-
     
-    for (int i = 0;i<( (array_number/18)-(tel+telback));i++){
-        arraypass[i] = array5[i+tel];
+  int lengthof = (array_number/18)-(tel_zero+telback_zero);
+    /// step seven algorithm
+    /// eliminate useless zero's
+    for (int i = 0;i<( lengthof);i++){
+        arraypass[i] = array5[i+tel_zero];
     }
-    int lengthof = (array_number/18)-(tel+telback);
-    //hwlib::cout<< "length of pass"<< lengthof;
-  //  hwlib::cout<<"pass2";
+    
+  
 
-    int tel876=0;
-    int tel54=0;
-    int tel32=0;
-    int tel10=0;
 
+
+/// step eigth algorith (determine password)
     for(int i = 0 ; i<lengthof;i++){
     
     if(arraypass[i]==8||arraypass[i] == 7 || arraypass[i]==6){
@@ -180,8 +209,7 @@ void profile::compare_password(){
     if (p==temp){
         hwlib::cout << "lock is opened by sound\n";
         l.open();
-        hwlib::wait_ms(5000);
-        l.close();
+        hwlib::wait_ms(2000);
     }
     else{
         hwlib::cout<<"to many diffferents by sound\n"<<"temp is "<<
@@ -191,10 +219,11 @@ void profile::compare_password(){
     
 }
 
+
+
+
 void profile::set_password(){
-    
     password sum(0,0,0,0);
-   
     bool st_x=1;
     hwlib::cout<< "\npress 1 to start set \n press 2 to stop\n";
     while (st_x==1){
@@ -203,16 +232,14 @@ void profile::set_password(){
             set_p_run=1;
     set_p=1;
     for (int count=0; count<6 ;count++){
-        hwlib::cout<< "\nset password "<< count+1<<"  of the 6 times >>   \n";
+        hwlib::cout<< "\n set password "<< count+1<<"  of the 6 times >>   \n";
         measure();
         math_password();
-        hwlib::cout<<"temp is "<<temp;
+        hwlib::cout<<"temp is    "<<temp;
         sum+=temp;
-        hwlib::cout<<"sum = "<<sum;
+        hwlib::cout<<"  sum = "<<sum;
         temp  = password(0,0,0,0);
     }
-    
-      
     p = (sum/6);
     hwlib::cout<<" password = "  <<  p  <<"\n";
  st_x=0;

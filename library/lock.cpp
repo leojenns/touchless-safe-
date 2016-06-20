@@ -12,27 +12,27 @@
 
 
 lock::lock(hwlib::target::pin_out & pinout, hwlib::target::pin_in & pinin ):
-see(pinin),move(pinout){}
+motor(pinout),movement(pinin){}
 
 void lock::open(){
     if (status==0){
-        move.turnto0();
+        turnto0();
         status =1;
    }
 }
 
 void lock::close(){
     if (status==1){
-        move.turnto90();
+        turnto90();
         status = 0;
     }
 }
 
 
 void lock::pir(){
-    if(see.get() ==1){
+    if(get() ==1){
         close();
-        hwlib::cout<< "person detected\n";
+        // wait for 1,5 second
         hwlib::wait_ms(1500);
     }
     

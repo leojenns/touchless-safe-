@@ -32,11 +32,15 @@ public:
 /// int input function.
 //
 /// gives the value back that the position contains out the matrix that is equal to the position that is pressed.
+/// the colloms are set low one at the time .
+/// the row that outputs low is the presssed key
     int input();
 /// int input function.
 //
 /// gives the value back that the position contains out the matrix that is equal to the position that is pressed 
 /// deferend with void input() is this function_waits until key is pressed.
+/// the colloms are set low one at the time .
+/// the row that outputs low is the presssed key
     int input_wait();
 };
 

@@ -45,16 +45,11 @@ bool password::operator==(const password & rhs) const{
      if ((tel32<=(rhs.tel32+2))&&(tel32>=(rhs.tel32-1))){
         c=1;
     }
-     if ((tel10<=(rhs.tel10+3))&&(tel10>=(rhs.tel10-1))){
+     if ((tel10<=(rhs.tel10+3))&&(tel10>=(rhs.tel10-2))){
         d=1;
     }
-    
     int summ =tel876 + tel54 + tel32 + tel10;
     int sumrhs = rhs.tel876 + rhs.tel54 + rhs.tel32 + rhs.tel10;
-    
-    
-    
-    
     
     if ((summ <= sumrhs+5)&&( summ >= sumrhs - 5)){
         if (((a==1) && (b==1))&&(( c==1)&& (d==1))){
@@ -85,6 +80,7 @@ password password::operator+(const password & rhs)const{
 password password::operator/(const int rhs)const{
     return password(tel876/rhs,tel54/rhs,tel32/rhs,tel10/rhs);
 }
+
 password password::operator*(const int rhs)const{
      return password(tel876*rhs,tel54*rhs,tel32*rhs,tel10*rhs);
 }

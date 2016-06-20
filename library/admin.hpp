@@ -20,15 +20,13 @@
 /// class admin
 //
 /// this class is an decorator for the soundlock class so it is possible to have different passwords on the same lock 
-class admin {
+class admin :public lock{
 protected:
 /// password p
 //
 /// the password that belongs to the admin
     password p = password(1,2,3,4);
-/// reference to lock
 
-     lock & l;
      /// reference to keypad
     keypad & k;
 /// bool function for admin login

@@ -11,14 +11,15 @@
 #include "admin.hpp"
 
 admin::admin(lock & l,keypad & k):
-l(l),k(k)
+lock(l),k(k)
 {}
 
 
 void admin::admin_wait(){
 hwlib::cout<< "please enter password:"; 
 while(1){
-   hwlib::wait_ms(500);
+    hwlib::wait_ms(500);
+    /// input password.
     int p = k.input_wait();
         hwlib::wait_ms(500);
     int q=  k.input_wait();
@@ -32,6 +33,7 @@ while(1){
     if (admin_login(af)==1){
         hwlib::cout<< "correct password\n";
         admin_menu();
+        return;
     }
     else{
         hwlib::cout<< "wrong password try again\n";
@@ -43,6 +45,7 @@ while(1){
 
 void admin::admin_menu(){
     hwlib::cout<< "welkom to admin\n please enter password:\n";
+    ///input password
     int a = k.input_wait();
     hwlib::wait_ms(500);
     int b=  k.input_wait();
@@ -62,19 +65,20 @@ void admin::admin_menu(){
     }
 
 while (1){
-    
+    /// choise menu
     int choice = k.input();
     if (choice== 1){
-        l.open();
+        open();
     }
     else if (choice == 2){
-        l.close();
+        close();
     }
     else if (choice ==3){
-        l.close();
+        close();
         admin_wait();
     }
     else if (choice == 4){
+        hwlib::cout<<"\n home \n choise an profile or admin\n";
         return;
     }
 
@@ -86,8 +90,8 @@ while (1){
 }
 
 
-
 bool admin::admin_login(password & t){
+    /// if givin password is equal to admin password
     if ( p>=t){
         return 1;
     }

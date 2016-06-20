@@ -111,7 +111,7 @@ hwlib::cout<<"lock closes\n";
 l.close();
 
 
-hwlib::cout << "if lock has open after that closed lock is working";
+hwlib::cout << "if lock has open after that closed lock is working\n";
 
 
 hwlib::wait_ms(1000);
@@ -122,9 +122,10 @@ x=0;
 while(x==0){
     if (p.get()==1)
     {
-        hwlib::cout<<"movement\n";
+
         x=1;
     }
 }
-hwlib::cout<<"pir working\n";
+hwlib::cout<<"pir working\n test completed";
+
 }
