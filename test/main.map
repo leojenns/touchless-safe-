@@ -1327,7 +1327,7 @@ END GROUP
                 [!provide]                PROVIDE (__ram_size, __ram_size)
                 [!provide]                PROVIDE (__ram_end, __ram_end)
 
-.text           0x00000000     0x13d8
+.text           0x00000000     0x13dc
                 0x00000000                . = ALIGN (0x4)
                 0x00000000                __text_start = .
                 [!provide]                PROVIDE (__text_start, __text_start)
@@ -1467,134 +1467,134 @@ END GROUP
                 0x00000708      0x24a profile.o
                 0x00000708                profile::math_password()
  *fill*         0x00000952        0x2 
- .text._ZN7profile16compare_passwordEv
-                0x00000954       0x94 profile.o
-                0x00000954                profile::compare_password()
  .text._ZN7profile12set_passwordEv
-                0x000009e8      0x104 profile.o
-                0x000009e8                profile::set_password()
+                0x00000954      0x104 profile.o
+                0x00000954                profile::set_password()
+ .text._ZN7profile16compare_passwordEv
+                0x00000a58       0x98 profile.o
+                0x00000a58                profile::compare_password()
  .text._ZN7profileC2ERN3due7pin_adcER4lockR6keypad
-                0x00000aec       0x34 profile.o
-                0x00000aec                profile::profile(due::pin_adc&, lock&, keypad&)
-                0x00000aec                profile::profile(due::pin_adc&, lock&, keypad&)
+                0x00000af0       0x34 profile.o
+                0x00000af0                profile::profile(due::pin_adc&, lock&, keypad&)
+                0x00000af0                profile::profile(due::pin_adc&, lock&, keypad&)
  .text._ZN3due6pin_in3getEv
-                0x00000b20       0x10 main.o
-                0x00000b20                due::pin_in::get()
+                0x00000b24       0x10 main.o
+                0x00000b24                due::pin_in::get()
  .text._ZN3due6pin_inC2ENS_4pinsE
-                0x00000b30       0x34 main.o
-                0x00000b30                due::pin_in::pin_in(due::pins)
-                0x00000b30                due::pin_in::pin_in(due::pins)
+                0x00000b34       0x34 main.o
+                0x00000b34                due::pin_in::pin_in(due::pins)
+                0x00000b34                due::pin_in::pin_in(due::pins)
  .text._ZN3due7pin_outC2ENS_4pinsE
-                0x00000b64       0x34 main.o
-                0x00000b64                due::pin_out::pin_out(due::pins)
-                0x00000b64                due::pin_out::pin_out(due::pins)
+                0x00000b68       0x34 main.o
+                0x00000b68                due::pin_out::pin_out(due::pins)
+                0x00000b68                due::pin_out::pin_out(due::pins)
  .text._ZN3due7pin_adc3getEv
-                0x00000b98       0x24 main.o
-                0x00000b98                due::pin_adc::get()
+                0x00000b9c       0x24 main.o
+                0x00000b9c                due::pin_adc::get()
  .text.startup.main
-                0x00000bbc      0x2ec main.o
-                0x00000bbc                main
+                0x00000bc0      0x2ec main.o
+                0x00000bc0                main
  .text.__startup
-                0x00000ea8       0x48 bmptk_cortex.o
-                0x00000ea8                __startup
+                0x00000eac       0x48 bmptk_cortex.o
+                0x00000eac                __startup
  .text.__cxa_pure_virtual
-                0x00000ef0        0x2 bmptk_cortex.o
-                0x00000ef0                __cxa_pure_virtual
-                0x00000ef4                . = ALIGN (0x4)
- *fill*         0x00000ef2        0x2 
+                0x00000ef4        0x2 bmptk_cortex.o
+                0x00000ef4                __cxa_pure_virtual
+                0x00000ef8                . = ALIGN (0x4)
+ *fill*         0x00000ef6        0x2 
  *(.glue_7t .glue_7)
- .glue_7        0x00000ef4        0x0 linker stubs
- .glue_7t       0x00000ef4        0x0 linker stubs
-                0x00000ef4                . = ALIGN (0x4)
+ .glue_7        0x00000ef8        0x0 linker stubs
+ .glue_7t       0x00000ef8        0x0 linker stubs
+                0x00000ef8                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata._ZTVN5hwlib20cout_using_uart_putcE
-                0x00000ef4       0x10 keypad.o
-                0x00000ef4                vtable for hwlib::cout_using_uart_putc
+                0x00000ef8       0x10 keypad.o
+                0x00000ef8                vtable for hwlib::cout_using_uart_putc
  .rodata._ZTVN3due7pin_outE
-                0x00000f04        0xc keypad.o
-                0x00000f04                vtable for due::pin_out
- .rodata        0x00000f10       0x40 keypad.o
+                0x00000f08        0xc keypad.o
+                0x00000f08                vtable for due::pin_out
+ .rodata        0x00000f14       0x40 keypad.o
  .rodata.str1.1
-                0x00000f50       0x19 keypad.o
+                0x00000f54       0x19 keypad.o
  .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
-                0x00000f69        0xc keypad.o
+                0x00000f6d        0xc keypad.o
  .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
-                0x00000f75       0xa4 keypad.o
- *fill*         0x00001019        0x3 
+                0x00000f79       0xa4 keypad.o
+ *fill*         0x0000101d        0x3 
  .rodata._ZZN3due11ad_seq_infoEiE12ad_seq_array
-                0x0000101c       0x70 keypad.o
+                0x00001020       0x70 keypad.o
  .rodata._ZTV5sound
-                0x0000108c        0xc sound.o
-                0x0000108c                vtable for sound
+                0x00001090        0xc sound.o
+                0x00001090                vtable for sound
  .rodata._ZTV9soundlock
-                0x00001098       0x18 sound_lock.o
-                0x00001098                vtable for soundlock
+                0x0000109c       0x18 sound_lock.o
+                0x0000109c                vtable for soundlock
  .rodata.str1.1
-                0x000010b0       0x2f password.o
+                0x000010b4       0x2f password.o
                                  0x4a (size before relaxing)
- *fill*         0x000010df        0x1 
+ *fill*         0x000010e3        0x1 
  .rodata._ZTV3pwm
-                0x000010e0        0xc pwm.o
-                0x000010e0                vtable for pwm
+                0x000010e4        0xc pwm.o
+                0x000010e4                vtable for pwm
  .rodata._ZTV5motor
-                0x000010ec        0xc motor_g9.o
-                0x000010ec                vtable for motor
+                0x000010f0        0xc motor_g9.o
+                0x000010f0                vtable for motor
  .rodata._ZTV4lock
-                0x000010f8        0xc lock.o
-                0x000010f8                vtable for lock
+                0x000010fc        0xc lock.o
+                0x000010fc                vtable for lock
  .rodata._ZTV7profile
-                0x00001104       0x18 profile.o
-                0x00001104                vtable for profile
+                0x00001108       0x18 profile.o
+                0x00001108                vtable for profile
  .rodata.str1.1
-                0x0000111c       0xf4 profile.o
+                0x00001120       0xf4 profile.o
                                 0x10d (size before relaxing)
  .rodata._ZTVN3due6pin_inE
-                0x00001210        0xc main.o
-                0x00001210                vtable for due::pin_in
+                0x00001214        0xc main.o
+                0x00001214                vtable for due::pin_in
  .rodata._ZTVN3due7pin_adcE
-                0x0000121c        0xc main.o
-                0x0000121c                vtable for due::pin_adc
+                0x00001220        0xc main.o
+                0x00001220                vtable for due::pin_adc
  .rodata.str1.1
-                0x00001228      0x1ae main.o
+                0x0000122c      0x1ae main.o
                                 0x1c5 (size before relaxing)
-                0x000013d8                . = ALIGN (0x4)
- *fill*         0x000013d6        0x2 
+                0x000013dc                . = ALIGN (0x4)
+ *fill*         0x000013da        0x2 
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000013d8                . = ALIGN (0x4)
+                0x000013dc                . = ALIGN (0x4)
  *(.gcc_except_table)
-                0x000013d8                . = ALIGN (0x4)
+                0x000013dc                . = ALIGN (0x4)
  *(.eh_frame_hdr)
-                0x000013d8                . = ALIGN (0x4)
+                0x000013dc                . = ALIGN (0x4)
  *(.eh_frame)
-                0x000013d8                . = ALIGN (0x4)
-                0x000013d8                __text_end = .
+                0x000013dc                . = ALIGN (0x4)
+                0x000013dc                __text_end = .
                 [!provide]                PROVIDE (__text_end, __text_end)
 
-.vfp11_veneer   0x000013d8        0x0
- .vfp11_veneer  0x000013d8        0x0 linker stubs
+.vfp11_veneer   0x000013dc        0x0
+ .vfp11_veneer  0x000013dc        0x0 linker stubs
 
-.v4_bx          0x000013d8        0x0
- .v4_bx         0x000013d8        0x0 linker stubs
+.v4_bx          0x000013dc        0x0
+ .v4_bx         0x000013dc        0x0 linker stubs
 
-.iplt           0x000013d8        0x0
- .iplt          0x000013d8        0x0 keypad.o
+.iplt           0x000013dc        0x0
+ .iplt          0x000013dc        0x0 keypad.o
 
-.rel.dyn        0x000013d8        0x0
- .rel.iplt      0x000013d8        0x0 keypad.o
+.rel.dyn        0x000013dc        0x0
+ .rel.iplt      0x000013dc        0x0 keypad.o
 
 .IF_YOU_SEE_THIS_YOU_HAVE_ONE_OR_MORE_GLOBAL_OBJECT_CONSTRUCTORS
  *(.init)
  *(.preinit_array)
  *(SORT(.init_array.*))
  *(.init_array)
-                0x000013d8                . = ALIGN (0x4)
-                0x000013d8                __exidx_start = .
+                0x000013dc                . = ALIGN (0x4)
+                0x000013dc                __exidx_start = .
                 [!provide]                PROVIDE (__exidx_start, __exidx_start)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000013d8                . = ALIGN (0x4)
-                0x000013d8                __exidx_end = .
+                0x000013dc                . = ALIGN (0x4)
+                0x000013dc                __exidx_end = .
                 [!provide]                PROVIDE (__exidx_end, __exidx_end)
 
 .bss            0x20000000    0x12010
@@ -1626,9 +1626,9 @@ END GROUP
                 0x20012010                __bss_end = .
                 [!provide]                PROVIDE (__bss_end, __bss_end)
 
-.data           0x20012010       0x14 load address 0x000013d8
+.data           0x20012010       0x14 load address 0x000013dc
                 0x20012010                . = ALIGN (0x4)
-                0x000013d8                __data_init_start = LOADADDR (.data)
+                0x000013dc                __data_init_start = LOADADDR (.data)
                 [!provide]                PROVIDE (__data_init_start, __data_init_start)
                 0x20012010                __data_start = .
                 [!provide]                PROVIDE (__data_start, __data_start)
@@ -1640,13 +1640,13 @@ END GROUP
                 0x20012024                . = ALIGN (0x4)
                 0x20012024                __data_end = .
                 [!provide]                PROVIDE (__data_end, __data_end)
-                0x000013d8                __data_init_end = LOADADDR (.data)
+                0x000013dc                __data_init_end = LOADADDR (.data)
                 [!provide]                PROVIDE (__data_init_end, __data_init_end)
                 0x00000014                PROVIDE (__data_size, (__data_end - __data_start))
                 0x00000014                PROVIDE (__data_init_size, __data_size)
                 [!provide]                PROVIDE (__data_init_end, (__data_init_start + __data_init_size))
 
-.igot.plt       0x20012024        0x0 load address 0x000013ec
+.igot.plt       0x20012024        0x0 load address 0x000013f0
  .igot.plt      0x20012024        0x0 keypad.o
                 0x20012024                . = ALIGN (0x4)
                 0x20012024                __heap_start = .

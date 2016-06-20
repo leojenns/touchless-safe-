@@ -15,7 +15,7 @@
       <Project Name="alpha_sound" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="applicatie" Path="applictaie/_codelite.project" Active="Yes"/>
+  <Project Name="applicatie" Path="applictaie/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="applictaie" ConfigName="Release"/>
@@ -31,7 +31,7 @@
       <Project Name="led" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="library" Path="library/_codelite.project" Active="No"/>
+  <Project Name="library" Path="library/_codelite.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="library" ConfigName="Release"/>
